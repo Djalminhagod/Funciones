@@ -16,7 +16,6 @@ public class conversorespacial
         return euros/0.9;
     }public static boolean validarcompra(double precio, double saldo){
         if(precio<=saldo){
-            saldo=saldo-precio;
             return true;
         }
         return false;
