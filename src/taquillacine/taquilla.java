@@ -4,11 +4,19 @@ import java.util.Scanner;
 
 public class taquilla {
     public static void main(String[] args) {
-        System.out.println(Gestorentradas.getpreciobase());
-        System.out.println(Gestorentradas.calcularprecio(20, true));
-        System.out.println(Gestorentradas.calcularprecio(20, false));
-        System.out.println(Gestorentradas.calcularprecio(66, true));
-        System.out.println(Gestorentradas.calcularprecio(66, false));
-        Gestorentradas.imprimirticket("cars",15,20);
+        double precio = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese su edad: ");
+        int edad = sc.nextInt();
+        System.out.println("ingrese pelicula");
+        String pelicula = sc.next();
+        System.out.println("es dia del espectador: (true/false)");
+        System.out.println("introduzca la butaca ");
+        int butaca = sc.nextInt();
+        boolean diaespecial = sc.nextBoolean();
+        Gestorentradas.calcularprecio(edad,diaespecial);
+        
+
+        Gestorentradas.imprimirticket(pelicula,butaca,precio);
     }
 }
