@@ -14,13 +14,10 @@ public class registrosUsuario {
         if (nombre == null || nombre.isEmpty()) {
             return nombre;
         }
-        return nombre.substring(0, 1).toUpperCase() + nombre.substring(1);
+        return nombre.substring(0, 1).toUpperCase() + nombre.substring(1).toLowerCase();
     }
     public static boolean emailvalido(String email) {
-        if (email.contains("@")) {
-            return true;
-        }
-        return false;
+        return email.contains("@");
     }
     public static void  mostrarerrores(){
             System.out.println("La contraseña tiene que tener 8 caracteres");

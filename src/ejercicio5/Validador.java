@@ -11,18 +11,24 @@ public class Validador {
         nombre=registrosUsuario.formatearnombre(nombre);
         System.out.println("ingrese su email ");
         String email = sc.nextLine();
-        if(registrosUsuario.emailvalido(email)==false){
-            System.out.println("repite no tiene @");
-            email = sc.nextLine();
-        }
-
         do {
+            if(!registrosUsuario.emailvalido(email)){
+                System.out.println("repite no tiene @");
+                email = sc.nextLine();
+            }
+
+        }while(!registrosUsuario.emailvalido(email));
+        do {
+            if(!registrosUsuario.emailvalido(email)){
+                System.out.println("repite no tiene @");
+                email = sc.nextLine();
+            }
             System.out.println("Ingrese una Contraseña: ");
             pass=sc.nextLine();
-            if (registrosUsuario.espasswordsegura(pass)==false) {
+            if (!registrosUsuario.espasswordsegura(pass)) {
                 registrosUsuario.mostrarerrores();
             }
-        }while (registrosUsuario.espasswordsegura(pass)==false);
+        }while (!registrosUsuario.espasswordsegura(pass));
         System.out.println("Bienvenido "+nombre+" tu email es "+email);
 
     }
