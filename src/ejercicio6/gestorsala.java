@@ -22,6 +22,9 @@ public class gestorsala {
             sala[fila][columna] = 'x';
             return true;
         } else if (sala[fila][columna]=='x') {
+            System.out.println("------------------------");
+            System.out.println("Elige otro esta ocupado");
+            System.out.println("------------------------");
             return false;
         }
 

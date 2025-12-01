@@ -25,6 +25,7 @@ public class taquillateatro {
                         System.out.println("asiento");
                         int columna = sc.nextInt();
                         gestorsala.reservarasientos(teatro, fila, columna);
+
                         break;
                         default:
                             System.out.println("opcion incorrecta");
