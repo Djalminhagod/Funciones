@@ -1,5 +1,7 @@
 package ejercicio6;
 
+import java.sql.SQLOutput;
+
 public class gestorsala {
     public static void inicializarMatriz(char[][] sala){
     for (int i = 0; i < sala.length; i++) {
@@ -26,6 +28,8 @@ public class gestorsala {
             System.out.println("Elige otro esta ocupado");
             System.out.println("------------------------");
             return false;
+        } else if (sala[fila][columna]>sala[fila][columna]) {
+            System.out.println("Incorrecto");
         }
 
         return false;
